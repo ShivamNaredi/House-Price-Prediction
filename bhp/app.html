@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Home Price Prediction</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="total_sqft">Total Square Feet:</label>
+                <input type="number" id="total_sqft" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" required>
+                    <option value="">Select Location</option>
+                    <!-- Location options will be populated here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bhk">BHK (1-5):</label>
+                <input type="number" id="bhk" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="bath">Bath (1-5):</label>
+                <input type="number" id="bath" min="1" max="5" required>
+            </div>
+            <button type="submit">Predict Price</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
